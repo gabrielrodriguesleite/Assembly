@@ -1,9 +1,12 @@
 # $ make app
 FONTES = main.s
-BINARIO = App 
+BINARIO = App
 COMPILADOR = gcc
-COMP_OP = 
+COMP_OP =
 LINK_OP = -no-pie -nostdlib
 
 app: $(FONTES)
 	$(COMPILADOR) $(FONTES) $(COMP_OP) $(LINK_OP) -o $(BINARIO)
+
+run: app
+	./App
