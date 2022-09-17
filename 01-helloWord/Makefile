@@ -9,4 +9,4 @@ app: $(FONTES)
 	$(COMPILADOR) $(FONTES) $(COMP_OP) $(LINK_OP) -o $(BINARIO)
 
 run: app
-	./App
+	./$(BINARIO)
