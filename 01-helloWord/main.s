@@ -1,15 +1,15 @@
-.global _start					/* _start é obrigatório como o main já que é procurado pelo linker*/
-.text							/* ou "section .text" -- o código executavel vai na seção .text*/
+.global _start						/* _start é obrigatório como o main já que é procurado pelo linker*/
+.text								/* ou "section .text" -- o código executavel vai na seção .text*/
 _start:
-	movq $1,  %rax
-	movq $1,  %rdi
-	leaq msg(%rip), %rsi
-	movq $13, %rdx
+	movq		$1,			%rax
+	movq		$1,			%rdi
+	leaq		msg(%rip),	%rsi
+	movq		$13, 		%rdx
 	syscall
-	movq $60, %rax
-	xorq %rdi, %rdi
+	movq		$60,		%rax
+	xorq		%rdi, 		%rdi
 	syscall
-	.section .rodata
+section			.rodata				/* seção para dados somente leitura*/
 msg:
 	.ascii "Olá mundo!\n"	
 
