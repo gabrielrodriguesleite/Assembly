@@ -9,7 +9,7 @@ _start:
 	movq		$60,		%rax
 	xorq		%rdi, 		%rdi
 	syscall
-section			.rodata				/* seção para dados somente leitura*/
+.section		.rodata				/* seção para dados somente leitura*/
 msg:
 	.ascii "Olá mundo!\n"	
 
