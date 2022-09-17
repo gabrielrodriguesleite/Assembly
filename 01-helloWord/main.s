@@ -1,4 +1,4 @@
-.global _start /*_start é obrigatório como o main*/
+.global _start /*_start é obrigatório como o main já que é procurado pelo linker*/
 .text
 _start:
   movq $1,  %rax
